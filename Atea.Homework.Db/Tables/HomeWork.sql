@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[HomeWork]
+(
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
+    [FirstArgument] NVARCHAR(50) NULL, 
+    [SecondArgument] NVARCHAR(50) NULL, 
+    [Sum] NVARCHAR(100) NULL, 
+    [Date_Created] DATETIMEOFFSET NOT NULL DEFAULT GETDATE(), 
+    [Date_Modified] DATETIMEOFFSET NOT NULL DEFAULT GETDATE()
+
+)
