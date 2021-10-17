@@ -17,7 +17,7 @@ namespace Atea.Homework.API
 
         private async Task<Entity> SaveDataUsingDapper(Entity entity)
         {
-            String _connectionString = "Server=[server_name];Database=[database_name];Trusted_Connection=true";
+            String _connectionString = "Data Source=Homework-sql.database.windows.net;Initial Catalog = AteaHomework; User ID = Atea; Password = Atea123; Trusted_Connection=true";
             using (var connection = new SqlConnection(_connectionString))
             {
                 var parameters = new { FirstArgument = entity.firstArgument, SecondArgument = entity.secondArgument, Sum = entity.sum };
